@@ -18,7 +18,7 @@
 				<p>Tình trạng: {{$item->prod_condition}}</p>
 				<p>Khuyến mại: {{$item->prod_promotion}}</p>
 				<p>Còn hàng: @if($item->prod_status ==1) Con hang @else Het hang @endif</p>
-				<p class="add-cart text-center"><a href="#">Đặt hàng online</a></p>
+				<p class="add-to-cart text-center"><a class="add_to_cart" data-url="{{route('addCart',['id'=>$item->prod_id])}}" href="#">Đặt hàng online</a></p>
 			</div>
 		</div>							
 	</div>
@@ -66,4 +66,28 @@
 	</div>
 </div>	
 @stop 				
-					
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" ></script> 
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" ></script>
+<script>
+	function addToCart(event){ 
+		event.preventDefault();
+		let urlCart = $(this).data('url'); 
+		$.ajax({ 
+			type: "GET", 
+			url: urlCart, 
+			dataType: 'json', 
+			success: function(data) {
+				if(data.code === 200) 
+				alert('Them vao gio hang thanh cong'); 
+			}, 
+			error: function() {
+
+			}
+		}); 
+	}
+	$(function (){
+		$('.add_to_cart').on('click', addToCart); 
+	});
+</script>

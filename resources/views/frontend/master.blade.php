@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">	
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<title>Vietpro Shop - @yield('title')</title>
+	<title>DidongViet Shop - @yield('title')</title>
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/home.css">
-	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -39,7 +39,7 @@
 			<div class="row">
 				<div id="logo" class="col-md-3 col-sm-12 col-xs-12">
 					<h1>
-						<a href="{{asset('/')}}"><img src="img/home/logo.png"></a>						
+						<a href="{{asset('/')}}"><img src="img/home/fpt-shop.png" width="100px"></a>						
 						<nav><a id="pull" class="btn btn-danger" href="#">
 							<i class="fa fa-bars"></i>
 						</a></nav>			
@@ -52,8 +52,8 @@
 					</form>
 				</div>
 				<div id="cart" class="col-md-2 col-sm-12 col-xs-12">
-					<a class="display" href="#">Giỏ hàng</a>
-					<a href="#">6</a>				    
+					<a class="display" href="{{asset('showcart')}}">Giỏ hàng</a>
+					<a href="{{asset('showcart')}}">Cart</a>				    
 				</div>
 			</div>			
 		</div>
@@ -77,25 +77,25 @@
 
 					<div id="banner-l" class="text-center">
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-l-1.png" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-2.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-anh1.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-l-3.png" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-4.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-anh2.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-5.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-anh4.jpg" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-6.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-anh3.png" alt="" class="img-thumbnail"></a>
 						</div>
 						<div class="banner-l-item">
-							<a href="#"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
+							<a href="{{asset('/')}}"><img src="img/home/banner-l-7.png" alt="" class="img-thumbnail"></a>
 						</div>
 					</div>
 				</div>
@@ -116,10 +116,10 @@
 							<!-- The slideshow -->
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img src="img/home/slide-1.png" alt="Los Angeles" >
+									<img src="img/home/slide-2.png" alt="Los Angeles" >
 								</div>
 								<div class="carousel-item">
-									<img src="img/home/slide-2.png" alt="Chicago">
+									<img src="img/home/slide-anh2.jpg" alt="Chicago">
 								</div>
 								<div class="carousel-item">
 									<img src="img/home/slide-3.png" alt="New York" >
@@ -139,10 +139,10 @@
 					<div id="banner-t" class="text-center">
 						<div class="row">
 							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
-								<a href="#"><img src="img/home/banner-t-1.png" alt="" class="img-thumbnail"></a>
+								<a href="{{asset('/')}}"><img src="img/home/banner-anh5.png" alt="" class="img-thumbnail"></a>
 							</div>
 							<div class="banner-t-item col-md-6 col-sm-12 col-xs-12">
-								<a href="#"><img src="img/home/banner-t-1.png" alt="" class="img-thumbnail"></a>
+								<a href="{{asset('/')}}"><img src="img/home/banner-anh5.png" alt="" class="img-thumbnail"></a>
 							</div>
 						</div>					
 					</div> 
@@ -161,21 +161,21 @@
 			<div class="container">
 				<div class="row">				
 					<div id="logo-f" class="col-md-3 col-sm-12 col-xs-12 text-center">						
-						<a href="#"><img src="img/home/logo.png"></a>		
+						<a href="#"><img src="img/home/fpt-shop.png" width="100px"></a>		
 					</div>
 					<div id="about" class="col-md-3 col-sm-12 col-xs-12">
 						<h3>About us</h3>
-						<p class="text-justify">Vietpro Academy thành lập năm 2009. Chúng tôi đào tạo chuyên sâu trong 2 lĩnh vực là Lập trình Website & Mobile nhằm cung cấp cho thị trường CNTT Việt Nam những lập trình viên thực sự chất lượng, có khả năng làm việc độc lập, cũng như Team Work ở mọi môi trường đòi hỏi sự chuyên nghiệp cao.</p>
+						<p class="text-justify">Trong suốt quá trình hoạt động, FPT luôn nỗ lực với mục tiêu cao nhất là mang lại sự hài lòng cho khách hàng thông qua những dịch vụ, sản phẩm và giải pháp công nghệ tối ưu nhất.</p>
 					</div>
 					<div id="hotline" class="col-md-3 col-sm-12 col-xs-12">
 						<h3>Hotline</h3>
-						<p>Phone Sale: (+84) 0988 550 553</p>
-						<p>Email: sirtuanhoang@gmail.com</p>
+						<p>Phone Sale: 1800 6601</p>
+						<p></p>
 					</div>
 					<div id="contact" class="col-md-3 col-sm-12 col-xs-12">
 						<h3>Contact Us</h3>
-						<p>Address 1: B8A Võ Văn Dũng - Hoàng Cầu Đống Đa - Hà Nội</p>
-						<p>Address 2: Số 25 Ngõ 178/71 - Tây Sơn Đống Đa - Hà Nội</p>
+						<p>Address 1: số 130 Trần Duy Hưng, Phường Trung Hòa, Q.Cầu Giấy</p>
+						<p>Address 2: Số 498 Xã Đàn, Phường Nam Đồng, Quận Đống Đa, Thành phố Hà Nội, Việt Nam</p>
 					</div>
 				</div>				
 			</div>
@@ -183,10 +183,10 @@
 				<div class="container">
 					<div class="row">
 						<div id="footer-b-l" class="col-md-6 col-sm-12 col-xs-12 text-center">
-							<p>Học viện Công nghệ Vietpro - www.vietpro.edu.vn</p>
+							<p>Cua hang FPTShop- www.fptshop.com.vn</p>
 						</div>
 						<div id="footer-b-r" class="col-md-6 col-sm-12 col-xs-12 text-center">
-							<p>© 2017 Vietpro Academy. All Rights Reserved</p>
+							<p>2024- FPTShop All Right Reserved</p>
 						</div>
 					</div>
 				</div>

@@ -22,7 +22,7 @@ class FrontendController extends Controller
     } 
     public function getCategory($id){ 
         $data['cateName'] = Category::find($id); 
-        $data['items'] = Product::where('prod_cate',$id)->orderBy('prod_id','desc')->paginate(8); 
+        $data['items'] = Product::where('prod_cate',$id)->orderBy('prod_id','desc')->get(); 
         return view('frontend.category', $data); 
     } 
     public function postComment(Request $request, $id){
@@ -41,5 +41,8 @@ class FrontendController extends Controller
         $data['items'] = Product::where('prod_name','like','%'.$result.'%')->get(); 
         return view('frontend.search', $data); 
         
+    }  
+    public function payment(){
+        return view('frontend.payment'); 
     }
 }

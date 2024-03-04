@@ -5,7 +5,8 @@ use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\HomeController; 
 use App\Http\Controllers\Admin\CategoryController; 
 use App\Http\Controllers\Admin\ProductController; 
-use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\FrontendController; 
+use App\Http\Controllers\CartController; 
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +26,12 @@ Route::get('category/{id}/{slug}.html', [FrontendController::class, 'getCategory
 Route::post('detail/{id}/{slug}.html', [FrontendController::class, 'postComment']); 
 
 Route::get('search', [FrontendController::class, 'getSearch']); 
+Route::get('product/add-to-cart/{id}', [CartController::class, 'addToCart'])->name('addCart'); 
+Route::get('showcart', [CartController::class, 'showCart']); 
+Route::get('updatecart', [CartController::class, 'updateCart'])->name('updateCart'); 
+Route::get('deletecart',[CartCOntroller::class, 'deleteCart'])->name('deleteCart'); 
+
+Route::get('payment', [FrontendController::class, 'payment']); 
 
 Route::group(['namespace'=>'Admin'], function(){
     Route::group(['prefix'=>'Login', 'middleware'=>'CheckLogedIn'], function(){
